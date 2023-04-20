@@ -1,4 +1,4 @@
-# BasketballSimulation
+# BasketballSimulation Test
 Java project that generates basketball players and allows the user to pick 
 their team and simulate games across multiple seasons.
 
