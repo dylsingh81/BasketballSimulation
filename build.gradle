@@ -1,0 +1,21 @@
+plugins {
+    id 'java'
+}
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    // add your dependencies here
+}
+
+task buildJar(type: Jar) {
+    archiveFileName = "my-app.jar"
+    from sourceSets.main.output
+    manifest {
+        attributes(
+            'Main-Class': 'Application'
+        )
+    }
+}
