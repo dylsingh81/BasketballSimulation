@@ -32,5 +32,7 @@ jobs:
       run: |
         find src -name "*.java" > sources.txt
         javac -d . -cp .:$(echo src/**/*.java | tr ' ' ':') @sources.txt
+    - name: Run tests with JUnit
+      run: java -jar ./gradle/wrapper/gradle-7.2-bin/gradle-7.2/lib/plugins/junit-platform-console-standalone-1.8.2.jar --class-path build/classes/java/test/:build/classes/java/main/ --scan-classpath
     - name: Run Application
       run: java -cp .:src Application
