@@ -23,6 +23,6 @@ jobs:
         ./gradlew build
     - name: Compile with javac
       run: |
-        javac -d . -cp .:src src/Application.java src/controller/*.java
+        javac -d . -cp .:src:src/controller src/Application.java src/controller/*.java
     - name: Run Application
       run: java -cp .:src Application
